@@ -13,6 +13,7 @@ Plug 'preservim/nerdtree' |
 Plug 'jiangmiao/auto-pairs'
 Plug 'puremourning/vimspector'
 Plug 'szw/vim-maximizer'
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 let mapleader = " "
