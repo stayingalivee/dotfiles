@@ -38,8 +38,8 @@ set expandtab
 set backspace=indent,eol,start
 set smartindent
 set noswapfile
-set undodir=~/.config/nvim/undodir
-set undofile
+"set undodir=~/.config/nvim/undodir
+"set undofile
 set hls
 set incsearch
 set ignorecase
@@ -55,13 +55,20 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <leader>\ <C-w>v
+
+map <C-h> :tabr<cr>
+map <C-l> :tabl<cr>
+
 "TODO check this shit
 "nnoremap <leader>- <C-w>s
 nnoremap <silent> <leader>+ :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>/ :Rg<Space>
+
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition):
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+
