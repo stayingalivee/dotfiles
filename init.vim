@@ -1,16 +1,12 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
+Plug 'ellisonleao/gruvbox.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'jremmen/vim-ripgrep'
-Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jiangmiao/auto-pairs'
-Plug 'puremourning/vimspector'
 Plug 'mfussenegger/nvim-dap'
 Plug 'szw/vim-maximizer'
 Plug 'alvan/vim-closetag'
@@ -18,15 +14,21 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
+Plug 'itchyny/lightline.vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 call plug#end()
 
 let mapleader = " "
-let g:airline_theme='gruvbox'
+
+set termguicolors
+set background=dark
+colorscheme gruvbox
+
 let NERDTreeShowHidden=1
-syntax on
-autocmd vimenter * ++nested colorscheme gruvbox
-set background=dark  
+
+
 
 set nu 
 set relativenumber
@@ -44,7 +46,7 @@ set noswapfile
 set hls
 set incsearch
 set ignorecase
-set colorcolumn=80 
+set colorcolumn=120
 
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set formatoptions-=t
